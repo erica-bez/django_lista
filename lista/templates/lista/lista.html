@@ -1,0 +1,16 @@
+<h1>Minhas tarefas</h1>
+
+<ul>
+    {% for tarefa in tarefas %}
+        <li>
+            {{ tarefa.titulo }} -
+            {% if tarefa.concluida %}
+                feita
+            {% else %}
+                pendente
+            {% endif %}
+        </li>
+    {% empty %}
+        <li>Nenhuma tarefa cadastrada.</li>
+    {% endfor %}
+</ul>
